@@ -6,6 +6,10 @@ python3 budget_planner.py
 (or python budget_planner.py if in windows)
 
 """
+LEFT_OVER_GOOD = 500
+NO_LEFT_OVER = 0
+HOUSING_RULE = 0.3
+
 
 from finance_functions import *
 
@@ -183,10 +187,10 @@ def display_budget_recommendations(is_balanced: bool, leftover: float, monthly_t
         suggest_food_budget_func: Function to get suggested food budget
     """
     if is_balanced:
-        if leftover > 500:
+        if leftover > LEFT_OVER_GOOD:
             print("✅ EXCELLENT! You have a healthy budget with good savings potential.")
             print(f"   Consider saving ${leftover * 0.8:.2f} and using ${leftover * 0.2:.2f} for fun!")
-        elif leftover > 0:
+        elif leftover > NO_LEFT_OVER:
             print("✅ GOOD! Your budget is balanced, but there's little room for savings.")
             print("   Consider reducing expenses to build an emergency fund.")
         else:
@@ -197,7 +201,7 @@ def display_budget_recommendations(is_balanced: bool, leftover: float, monthly_t
         print(f"   You need to reduce expenses by ${abs(leftover):,.2f} per month.")
         print()
         print("SUGGESTIONS:")
-        if rent > monthly_take_home * 0.3:
+        if rent > monthly_take_home * HOUSING_RULE:
             print(f"   • Housing costs ${rent:,.2f} exceed 30% rule (${monthly_take_home * 0.3:.2f})")
         suggested_moderate = suggest_food_budget_func(1, "MODERATE")  # Assume 1 person for comparison
         if food_budget > suggested_moderate * 1.2:
