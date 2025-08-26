@@ -169,6 +169,7 @@ before submitting to the autograder.
 4. Exceeds  (MG)
    * All Report questions answered properly, including links for references
    * Report deeper thinking answered with some thought, including links for references
+   * No magic numbers are used in finance_functions.py
 
 
 AG - Auto-graded  
