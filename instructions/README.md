@@ -164,6 +164,7 @@ before submitting to the autograder.
 3. Meets  (MG)
    * Every function in has at least 4 examples in docstring
    * Properly formatted docstrings exist for each function
+   * Functions are DRY (make sure to call other functions as needed instead of duplicating code)
    * Coding practice file provided
    * Report questions 1-4 answered correctly
 4. Exceeds  (MG)
