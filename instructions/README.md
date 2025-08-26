@@ -164,13 +164,13 @@ before submitting to the autograder.
 3. Meets  (MG)
    * Every function in has at least 4 examples in docstring
    * Properly formatted docstrings exist for each function
-   * Functions are DRY (make sure to call other functions as needed instead of duplicating code)
    * Coding practice file provided
    * Report questions 1-4 answered correctly
 4. Exceeds  (MG)
    * All Report questions answered properly, including links for references
    * Report deeper thinking answered with some thought, including links for references
    * No magic numbers are used in finance_functions.py
+   * Functions are DRY (make sure to call other functions as needed instead of duplicating code)
 
 
 AG - Auto-graded  
