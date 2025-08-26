@@ -13,6 +13,23 @@ As you work on this assignment, remember the order:
 For every function, you define it, you document it, you implement it, and then you test it - **Before** moving onto the next function!
 
 
+## Running Unit Tests
+We have provided unit tests in [tests/test_financial_functions.py](../tests/test_finance_functions.py). You can run those tests in VS code or via the command line. Ideally your code should pass all of them. If it does not, you will want to evaluate why not. Looking through them will also help you think of edge cases you may have forgotten. 
+
+## Running the Larger Application
+Once you have **fully** completed the finance functions, you can run the larger application by running [budget_planner.py](../src/budget_planner.py). This can be run via vs code or via the command line. If running on the command line, you can do the following
+
+```
+> python3 budget_planner.py
+```
+
+or on windows
+```
+> python budget_planner.py
+```
+
+For both you need to be in the `src` directory! So you may have to first do the following `cd src` in the terminal (depending on where it starts). 
+
 
 
 ## Report.md and README.md
@@ -28,6 +45,47 @@ others on your own to get more practice coding.  However, you need to submit at 
 completed practice as its own python file (which means even if the coding practice had an online
 form to fill out like codingbat, you need to copy your solution to a python file). 
 
+## 🤖 Use of LLMs
+You should **not use LLMs for writing your code**. This is about learning the process, and without learning the process you may find it actually more difficult to generate code with LLMs. This is because the prompts for LLMs need to be exact, or they will make faulty assumptions about the code you are trying to generate (often generating incorrect test cases!). 
+
+You are free to use LLMs to help you think of edge cases  **after** you have a working function. An example prompt could be
+
+> Please evaluate the following function focusing on these specific areas:
+>
+> 1. **Code correctness**: Does the implementation match the docstring description?
+> 2. **Docstring completeness**: Are the parameters, return value, and examples clear and accurate?
+> 3. **Edge cases**: What boundary conditions or unusual inputs could cause issues?
+>
+> For any edge cases you identify:
+> - Explain why they're problematic
+> - Show what would happen with specific input examples
+> - Suggest how to handle them (documentation or code changes)
+>
+> Focus your feedback on the most important issues first. Assume this is for a beginner programming course at week 3 of our learning. We have not covered error checking yet, 
+> nor should I include specialized statements for invalid input.
+>
+> (then paste in the single function you are looking at)
+
+As part of your learning process, another example prompt could be
+
+> Can you describe a Python function to me, explaining each component: function signature, type hints, docstring structure, and examples. Use a function from basic programming (like math, string manipulation, or simple calculations) as your example.
+>
+> After your explanation, I want you to ask me THREE questions, but present them ONE AT A TIME. Wait for my response to each question before asking the next one.
+> 
+> Question requirements:
+> 1. First question: Test my understanding of function components
+> 2. Second question: Give me a function specification (including purpose, parameters, 
+> return type, and expected behavior) and ask me to write ONLY the function definition with complete docstring - no implementation needed
+> 3. Third question: Ask me to analyze or improve something about function design
+> 
+> For question 2, evaluate my docstring on these criteria:
+> - Clear description of what the function does
+> - Proper parameter documentation with types
+> - Clear return value description  
+> - Appropriate examples that demonstrate usage
+> - Follows standard Python docstring format
+> 
+> Be specific in your feedback about what's missing or could be improved.
 
 ## 📝 Grading Rubric
 
